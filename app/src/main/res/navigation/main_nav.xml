@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/expenseListFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.expense.expense_list.ExpenseListFragment"
+        android:label="Expense List"
+        tools:layout="@layout/fragment_expense_list">
+        <action
+            android:id="@+id/action_expenseListFragment_to_updateExpenseFragment"
+            app:destination="@id/updateExpenseFragment" />
+        <action
+            android:id="@+id/action_expenseListFragment_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
+        <action
+            android:id="@+id/action_expenseListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.expense.create_expense.AddExpenseFragment"
+        android:label="Add New Expense"
+        tools:layout="@layout/fragment_add_expense">
+        <action
+            android:id="@+id/action_addExpenseFragment_to_expenseListFragment"
+            app:destination="@id/expenseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateExpenseFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.expense.update_expense.UpdateExpenseFragment"
+        android:label="Update Expense"
+        tools:layout="@layout/fragment_update_expense">
+        <action
+            android:id="@+id/action_updateExpenseFragment_to_expenseListFragment"
+            app:destination="@id/expenseListFragment" />
+        <argument
+            android:name="selectedExpense"
+            app:argType="com.egsystem.dailyexpenses.data.models.Expense" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeListFragment"
+        android:name="com.egsystem.dailyincomes.ui.fragments.income.income_list.IncomeListFragment"
+        android:label="IncomeListFragment"
+        tools:layout="@layout/fragment_income_list">
+
+        <action
+            android:id="@+id/action_incomeListFragment_to_updateIncomeFragment"
+            app:destination="@id/updateIncomeFragment" />
+        <action
+            android:id="@+id/action_incomeListFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment" />
+        <action
+            android:id="@+id/action_incomeListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIncomeFragment"
+        android:name="com.egsystem.dailyincomes.ui.fragments.income.create_income.AddIncomeFragment"
+        android:label="AddIncomeFragment"
+        tools:layout="@layout/fragment_add_income">
+        <action
+            android:id="@+id/action_addIncomeFragment_to_incomeListFragment"
+            app:destination="@id/incomeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateIncomeFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.income.update_income.UpdateIncomeFragment"
+        android:label="UpdateIncomeFragment"
+        tools:layout="@layout/fragment_update_income">
+        <action
+            android:id="@+id/action_updateIncomeFragment_to_incomeListFragment"
+            app:destination="@id/incomeListFragment" />
+        <argument
+            android:name="selectedIncome"
+            app:argType="com.egsystem.dailyexpenses.data.models.Income" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.home.HomeFragment"
+        android:label="Daily Expenses"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_expenseListFragment"
+            app:destination="@id/expenseListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_incomeListFragment"
+            app:destination="@id/incomeListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_self"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termConditionFragment"
+        android:name="com.egsystem.dailyexpenses.ui.fragments.terms_conditions.TermConditionFragment"
+        android:label="TermConditionFragment"
+        tools:layout="@layout/fragment_settings" >
+    <action
+        android:id="@+id/action_global_termConditionFragment"
+        app:destination="@id/termConditionFragment" />
+    </fragment>
+</navigation>
