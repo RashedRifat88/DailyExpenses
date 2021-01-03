@@ -136,7 +136,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_weight="2"
                         android:padding="7dp"
-                        app:srcCompat="@drawable/ic_shopping_bag"
+                        app:srcCompat="@drawable/ic_expense"
                         tools:ignore="VectorDrawableCompat" />
 
                     <LinearLayout
@@ -215,7 +215,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_weight="2"
                         android:padding="7dp"
-                        app:srcCompat="@drawable/ic_shopping_bag"
+                        app:srcCompat="@drawable/ic_receive_amount"
                         tools:ignore="VectorDrawableCompat" />
 
                     <LinearLayout
@@ -305,7 +305,7 @@
                         android:layout_marginBottom="0dp"
                         android:layout_weight="2"
                         android:padding="7dp"
-                        app:srcCompat="@drawable/ic_shopping_bag"
+                        app:srcCompat="@drawable/ic_new2"
                         tools:ignore="VectorDrawableCompat" />
 
                     <LinearLayout
@@ -323,7 +323,7 @@
                             android:layout_marginTop="0dp"
                             android:layout_marginRight="0dp"
                             android:gravity="center"
-                            android:text="@string/expenses"
+                            android:text="@string/recent"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:textStyle="normal" />
@@ -376,45 +376,24 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:layout_weight="2"
-                        android:padding="7dp"
-                        app:srcCompat="@drawable/ic_shopping_bag"
-                        tools:ignore="VectorDrawableCompat" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:layout_marginLeft="0dp"-->
+<!--                        android:layout_marginTop="0dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:padding="7dp"-->
+<!--                        app:srcCompat="@drawable/ic_shopping_bag"-->
+<!--                        tools:ignore="VectorDrawableCompat" />-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginRight="0dp"
-                            android:gravity="center"
-                            android:text="@string/income"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="normal" />
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="center"-->
-<!--                            android:text=": "-->
-<!--                            android:textColor="@color/white"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="normal" />-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingTop="10dp"-->
+<!--                        android:paddingBottom="10dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal">-->
 
 <!--                        <TextView-->
 <!--                            android:layout_width="wrap_content"-->
@@ -423,12 +402,12 @@
 <!--                            android:layout_marginTop="0dp"-->
 <!--                            android:layout_marginRight="0dp"-->
 <!--                            android:gravity="center"-->
-<!--                            android:text="BDT 5"-->
-<!--                            android:textColor="@color/overlay_light_80"-->
+<!--                            android:text="@string/income"-->
+<!--                            android:textColor="@color/white"-->
 <!--                            android:textSize="18sp"-->
 <!--                            android:textStyle="normal" />-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
